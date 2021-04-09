@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home - Local Bakery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        body{
+            color: #a9a9a9;
+        }
+
+        a{
+            color: #a9a9a9 !important;
+        }
+
+        p{
+            margin: 0;
+        }
+
+        header{
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(16,29,44,.95), rgba(77, 45, 136, 0.95)),
+            url("assets/thumbnail_IMG_20190315_002439316.jpg") center no-repeat;
+            background-size: cover;
+            position: relative;
+
+        }
+        header > .container{
+            position: relative;
+            height: 100%;
+            padding: 0;
+        }
+
+        .navbar-brand{
+            position: absolute;
+            width: 100%;
+            max-width: 100px;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: opacity 650ms;
+        }
+
+        .navbar-brand:hover{
+            opacity: .8;
+        }
+
+        .hamburger-menu{
+            position: fixed;
+            top: 25px;
+            right: 15px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            background-color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            z-index: 999;
+        }
+
+        .hamburger-menu i{
+            font-size: 30px;
+            color: rgba(16,29,44,.7);
+            margin: auto;
+        }
+
+        .hamburger-menu .fa-times{
+            display:none;
+        }
+
+        .hamburger-menu .fa-times.open{
+            display: block;
+        }
+
+        .hamburger-menu .fa-bars.open{
+            display: none;
+        }
+
+        .nav-list{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            list-style: none;
+            background-color: #fff ;
+            z-index: 900;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0);
+            transition: opacity 650ms;
+        }
+
+        .nav-list,open{
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .hero-text{
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -45%);
+            text-align: center;
+        }
+
+    </style>
+
+    <script>
+        $(function () {
+            $('.hamburger-menu').on('click', function () {
+                $('.toggle').toggleClass('open');
+                $('.nav-list').toggleClass('open');
+            });
+        });
+    </script>
+</head>
+<body>
+
+
+<header id="home">
+    <div class="container">
+        <div class="hamburger-menu">
+            <i class="fas fa-bars toggle"></i>
+            <i class="fas fa-times toggle"></i>
+
+        </div>
+        <nav class="d-flex align-items-center justify-content-center">
+            <a href="home.html">
+                <img class="img-fluid" src = "assets/logo.png" alt="">
+            </a>
+            <ul class="nav-list text-center p-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+            </ul>
+        </nav>
+        <div class="hero-text w-100 text-white px-2 px-sm-0">
+            <h1 class="display-4">Welcome</h1>
+            <p class="lead">We sell custom cakes and baked goodies</p>
+            <a href="#">Find out more</a>
+        </div>
+    </div>
+</header>
+
+<script src="https://kit.fontawesome.com/ba33ab971e.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="scripts.js" type="text/javascript"></script>
+</body>
+
+
+
+</html>
