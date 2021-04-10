@@ -17,7 +17,7 @@
         }
 
         a{
-            color: #a9a9a9 !important;
+            color: #ffffff !important;
         }
 
         p{
@@ -27,7 +27,7 @@
         header{
             width: 100%;
             height: 100vh;
-            background: linear-gradient(rgba(16,29,44,.95), rgba(77, 45, 136, 0.95)),
+            background: linear-gradient(rgba(34, 26, 41, 0.95), rgba(147, 146, 148, 0.95)),
             url("assets/thumbnail_IMG_20190315_002439316.jpg") center no-repeat;
             background-size: cover;
             position: relative;
@@ -60,7 +60,7 @@
             width: 50px;
             height: 50px;
             display: flex;
-            background-color: #fff;
+            background-color: rgba(106, 52, 110, 0.432);
             border-radius: 4px;
             cursor: pointer;
             z-index: 999;
@@ -68,7 +68,7 @@
 
         .hamburger-menu i{
             font-size: 30px;
-            color: rgba(16,29,44,.7);
+            color: rgba(57, 33, 83, 0.7);
             margin: auto;
         }
 
@@ -91,7 +91,7 @@
             width: 100%;
             height: 100vh;
             list-style: none;
-            background-color: #fff ;
+            background-color: rgb(219, 219, 219) ;
             z-index: 900;
             display: flex;
             flex-direction: column;
@@ -101,7 +101,7 @@
             transition: opacity 650ms;
         }
 
-        .nav-list,open{
+        .nav-list.open{
             opacity: 1;
             transform: scale(1);
         }
@@ -136,7 +136,7 @@
 
         </div>
         <nav class="d-flex align-items-center justify-content-center">
-            <a href="home.html">
+            <a clas="navbar-brand" href="home.html">
                 <img class="img-fluid" src = "assets/logo.png" alt="">
             </a>
             <ul class="nav-list text-center p-0">
@@ -156,8 +156,8 @@
         </nav>
         <div class="hero-text w-100 text-white px-2 px-sm-0">
             <h1 class="display-4">Welcome</h1>
-            <p class="lead">We sell custom cakes and baked goodies</p>
-            <a href="#">Find out more</a>
+            <p class="lead mb-4">We sell custom cakes and baked goodies</p>
+            <a clas="btn px-5" href="#">Find out more</a>
         </div>
     </div>
 </header>
