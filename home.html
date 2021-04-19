@@ -24,6 +24,12 @@
             margin: 0;
         }
 
+        section{
+            padding: 60px 0;
+        }
+
+        /*header*/
+
         header{
             width: 100%;
             height: 100vh;
@@ -142,6 +148,108 @@
             left: 100%;
         }
 
+        /* About*/
+
+        .section-heading h4{
+            text-transform: uppercase;
+            color: #a9a9a9;
+            line-height: 0;
+            font-family: 'Teco', sans-serif;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .section-heading h1{
+            font-family: 'Niconne', cursive;
+            color: #a9a9a9;
+        }
+
+        .about .btn{
+            width: 150px;
+            color:#a9a9a9 !important;
+            transition: background-color 650ms;
+        }
+        .about .btn:hover{
+            color: #ffffff impo !important;
+            background-color: darkorchid;
+        }
+
+        @media (min-width: 576px) {
+            .navbar-brand{
+                max-width: 150px;
+            }
+
+            .hamburger-menu{
+                top: 35px;
+                right: 25px;
+            }
+        }
+
+        @media (min-width: 768px) {
+           .btn{
+               width: 150px;
+           }
+        }
+
+        @media (min-width: 992px) {
+          header > .container{
+              padding: 0 15px;
+          }
+
+          .hamburger-menu{
+              display: none;
+          }
+
+          .navbar-brand{
+              position: initial;
+              transform: initial;
+          }
+
+          .nav-list{
+              position: initial;
+              width: initial;
+              height: initial;
+              background-color: initial;
+              flex-direction: row;
+              opacity: initial;
+              transform: initial;
+              transition: initial;
+              margin: 0;
+              padding: 0;
+        }
+
+            .nav-item{
+             margin: 0 30px;
+            }
+
+            .nav-item:last-child{
+                margin-right: 0;
+            }
+            
+            .nav-link{
+                position: relative;
+                padding: 0;
+            }
+
+            .nav-link::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -3px;
+                background-color: #a9a9a9;
+                width: 100%;
+                height: 2px;
+                transform: scaleX(0);
+                transform-origin: center;
+                transition: 650ms;
+            }
+
+            .nav-link:hover::before{
+                transform: scaleX(1);
+            }
+
+        }
+
     </style>
 
     <script>
@@ -163,7 +271,7 @@
             <i class="fas fa-times toggle"></i>
 
         </div>
-        <nav class="d-flex align-items-center justify-content-center">
+        <nav class="d-flex align-items-center justify-content-center justify-content-lg-between">
             <a clas="navbar-brand" href="home.html">
                 <img class="img-fluid" src = "assets/logo.png" alt="">
             </a>
@@ -189,6 +297,105 @@
         </div>
     </div>
 </header>
+<main>
+    <section class="about" id="about">
+        <div class="container">
+            <div class="row align-items-lg-center">
+                <div class="col-12 col-md-6 text-center text-md-left">
+                    <div class="section-heading mb-3">
+                    <h4>About Us</h4>
+                    <h1 class="display-4">Who we are</h1>
+                </div>
+            <p>We are a local bakery who sells food and stuff.</p>
+            <a class="btn mt-4 mb-5 mb-md-0" href="#">Find our socials here!</a>
+            </div>
+            <div class="col-12 col-md-6">
+                <img class="img-fluid" src="assets\thumbnail_IMG_20200929_213115223.jpg" alt="">
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+
+
+    </section>
+
+    <section class="contact" id="contact">
+
+        <form class="form-horizontal" action="https://mailthis.to/18011506@uhi.ac.uk" 
+        method="POST">
+            <fieldset>
+            
+            <!-- Form Name -->
+            <legend>Contact Us</legend>
+            
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="name">Your Name:</label>  
+              <div class="col-md-6">
+              <input id="name" name="name" type="text" placeholder="you" class="form-control input-md" required="">
+              <span class="help-block">What is your name?</span>  
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="email">Email Address</label>  
+              <div class="col-md-6">
+              <input id="email" name="email" type="text" placeholder="person@domain.com" class="form-control input-md" required="">
+              <span class="help-block">The Email address we'll contact you with</span>  
+              </div>
+            </div>
+            
+            <!-- Multiple Radios -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="type">Enquiry Type</label>
+              <div class="col-md-4">
+              <div class="radio">
+                <label for="type-0">
+                  <input type="radio" name="type" id="type-0" value="1" checked="checked">
+                  General Enquiries
+                </label>
+                </div>
+              <div class="radio">
+                <label for="type-1">
+                  <input type="radio" name="type" id="type-1" value="2">
+                  Custom Order
+                </label>
+                </div>
+              <div class="radio">
+                <label for="type-2">
+                  <input type="radio" name="type" id="type-2" value="3">
+                  Other
+                </label>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Textarea -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="query">Enquiry</label>
+              <div class="col-md-4">                     
+                <textarea class="form-control" id="query" name="query">what can we do you for...</textarea>
+              </div>
+            </div>
+            
+            <!-- Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="submit"></label>
+              <div class="col-md-4">
+                <button id="submit" name="submit" class="btn btn-inverse">Submit</button>
+              </div>
+            </div>
+            
+            </fieldset>
+            </form>
+            
+
+    </section>
+</main>
 
 <script src="https://kit.fontawesome.com/bf7a2c6634.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
